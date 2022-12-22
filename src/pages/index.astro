@@ -1,10 +1,8 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import '../styles/background.css'
-import NavigationBar from '../components/NavigationBar';
+import Introduction from '../components/Introduction.astro';
+import Skills from '../components/Skills.astro';
 ---
 
 <!DOCTYPE html>
@@ -13,32 +11,15 @@ import NavigationBar from '../components/NavigationBar';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<div
 			id="root"
+			class="overflow-x-hidden"
 		>
-		<NavigationBar client:visible/>
-			HELLO WORLD
-			<div class=" h-96 ">
-
-			</div>
-			<div class=" h-96 ">
-
-			</div>
-			<div class=" h-96 ">
-
-			</div>
-			<div class=" h-96 ">
-
-			</div>
-			<div class=" h-96 ">
-
-			</div>
-			<div class=" h-96 ">
-
-			</div>
+			<Introduction />
+			<Skills />		
 		</div>
 	</body>
 </html>
