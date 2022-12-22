@@ -1,0 +1,6 @@
+
+#root {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(35.21% 90.13% at 3.89% 41.89%, #FCFAF8 0%, rgba(255, 220, 188, 0.38) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(45.06% 45.06% at 85.52% 60.39%, #FFFFFF 0%, rgba(249, 223, 200, 0.24) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(35.24% 90.22% at 3.75% 52.78%, #F9DFC8 0%, #FFE4CB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}

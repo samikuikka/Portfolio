@@ -1,0 +1,44 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import '../styles/background.css'
+import NavigationBar from '../components/NavigationBar';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div
+			id="root"
+		>
+		<NavigationBar client:visible/>
+			HELLO WORLD
+			<div class=" h-96 ">
+
+			</div>
+			<div class=" h-96 ">
+
+			</div>
+			<div class=" h-96 ">
+
+			</div>
+			<div class=" h-96 ">
+
+			</div>
+			<div class=" h-96 ">
+
+			</div>
+			<div class=" h-96 ">
+
+			</div>
+		</div>
+	</body>
+</html>
