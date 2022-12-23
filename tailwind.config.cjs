@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'display': ['Viaoda Libre', 'ui-sans-serif', 'system-ui', '-apple-system', 'Roboto' ]
+				'sans': ['Space Mono', 'ui-sans-serif', 'system-ui', '-apple-system', 'Roboto' ]
 			},
 
 			boxShadow: {

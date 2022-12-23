@@ -1,0 +1,32 @@
+---
+const { href } = Astro.props;
+---
+
+<div class="flex justify-center  w-min  md:basis-auto sm:basis-1/2 basis-full">
+    <a class="linkHeader  z-[2] text-2xl " href={href}>
+        <slot />
+    </a>
+</div>
+
+<style>
+
+
+    .linkHeader:hover {
+        position: relative;
+        background: linear-gradient(120.86deg, #4c1d95 3.99%, #e11d48 66.93%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    .linkHeader:hover::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        height: 2px;
+        background: linear-gradient(120.86deg, #4c1d95 3.99%, #e11d48 66.93%);
+    }
+</style>
