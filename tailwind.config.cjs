@@ -7,6 +7,10 @@ module.exports = {
 				'display': ['Viaoda Libre', 'ui-sans-serif', 'system-ui', '-apple-system', 'Roboto' ]
 			},
 
+			boxShadow: {
+				'glass': '0px 4px 24px -1px rgba(0,0,0,0.25)'
+			},
+
 			colors: {
 				primary: {
 					0: '#000000',
@@ -24,6 +28,9 @@ module.exports = {
 					95: ' #ffeee0',
 					98: ' #fff8f4',
 					99: '#fffbff',
+				},
+				white: {
+					100: '#fff'
 				},
 				secondary: {
 					0: '#000000',
