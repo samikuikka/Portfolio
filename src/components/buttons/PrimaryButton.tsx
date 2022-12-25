@@ -17,8 +17,8 @@ const PrimaryButton: React.FC<ButtonProps> = ({
         <button
             onClick={onClick}
             className={classNames(
-                "flex flex-row justify-start items-center",
-                'text-md font-medium py-2.5 m-4 text-white-100',
+                "flex flex-row justify-center items-center",
+                'text-md font-medium py-2.5 m-4 text-white-100 ',
                 "h-10  transition-colors rounded-full shadow-lg",
                 'opacity-80 hover:opacity-100',
                 { 'pl-4 pr-6': icon },

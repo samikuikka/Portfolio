@@ -4,7 +4,7 @@ const Actions = () => {
 
     return (
         <div
-            className='flex flex-row h-14 pl-5 z-[3]'
+            className='flex flex-col mobile:flex-row mobile:h-14 mobile:pl-5 z-[3]'
         >
             <PrimaryButton 
                 name="My Resume"
