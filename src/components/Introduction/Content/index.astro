@@ -1,0 +1,25 @@
+---
+import image from '../../../images/introduction.svg';
+---
+
+<div class="flex flex-1">
+    <div class="flex flex-col justify-center pl-16 flex-1 gap-8">
+        <h1 class="text-6xl text-center tracking-wide">Hi, I'm Sami</h1>
+        <p class="text-4xl text-center tracking-wider leading-[44px]">
+            I am aspiring <span class="detailedText font-semibold"> Web Developer</span> 🚀 Interested in new technologies
+            🚧 and Chinese dramas 🎭
+        </p>
+    </div>
+    <div class="flex justify-center flex-1 pt-[5%]">
+        <img src={image} />
+    </div>
+</div>
+
+<style>
+    .detailedText {
+        position: relative;
+        background: linear-gradient(45deg, #4c1d95 3.99%, #e11d48 66.93%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
