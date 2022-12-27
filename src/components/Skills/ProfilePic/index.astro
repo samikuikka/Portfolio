@@ -1,13 +1,14 @@
 ---
 import Glass from "../../Glass.astro";
 import profilePicture from '../../../images/20221220_151554.png';
+
 ---
 
 <div class="flex justify-center items-center h-full w-full">
     <div class="relative w-[330px] h-[370px]">
         <div class="absolute left-0 bottom-0 w-[300px] h-[350px] z-10">
             <Glass>
-                <div class="flex h-full w-full overflow-hidden">
+                <div class="flex h-full w-full rounded-2xl overflow-hidden">
                     <img src={profilePicture}/>
                 </div>
             </Glass>
