@@ -9,8 +9,11 @@ html, body {
 	height: 100%;
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
 }
 
-#root div {
-	scroll-snap-align: center;
+@media only screen and (min-width: 768px) {
+	#root div {
+		scroll-snap-align: start;
+	}
 }
