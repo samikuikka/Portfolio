@@ -4,7 +4,7 @@ import Technologies from './Technologies/index.astro';
 ---
 
 <!-- Skills container -->
-<div class="flex flex-col min-w-full min-h-screen z-40 bg-background px-[3%] py-[3%]">
+<div class="skills flex flex-col min-w-full min-h-screen z-40 bg-background px-[3%] py-[3%]">
     <!-- Header -->
     <div class="flex flex-row w-1/2 justify-center">
         <h1 class="text-5xl">My Skills</h1>
@@ -20,3 +20,9 @@ import Technologies from './Technologies/index.astro';
         </div>
     </div>
 </div>
+
+<style>
+    .skills {
+        scroll-snap-align: start;
+    }
+</style>

@@ -1,25 +1,27 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import Introduction from '../components/Introduction/index.astro';
-import Skills from '../components/Skills/index.astro';
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import Introduction from "../components/Introduction/index.astro";
+import Skills from "../components/Skills/index.astro";
+import Projects from "../components/Projects/index.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<div
-			id="root"
-			class="overflow-x-hidden"
-		>
+		<div id="root">
 			<Introduction />
-			<Skills />		
+			<Skills />
+			<Projects />
 		</div>
 	</body>
 </html>
