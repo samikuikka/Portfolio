@@ -24,7 +24,7 @@ const IndividualTech: React.FC<TechProps> = ({
             >
                 {/** Glass effect */}
                 <div
-                    className="  flex justify-center items-center h-full w-full bg-gradient-to-t from-white-100/40 to-white-100/80 group-hover:from-white-100/0 group-hover:to-white-100/0
+                    className="  flex justify-center items-center h-full w-full rounded-3xl bg-gradient-to-t from-white-100/40 to-white-100/80 group-hover:from-white-100/0 group-hover:to-white-100/0
                 "
                 >
                     {/** Logo container */}
