@@ -1,5 +1,7 @@
 import React from 'react';
 import IndividualTech from './IndividualTech';
+import arrowSVG from '../../../../images/tech-arrow.svg';
+
 
 // Logos
 import tsLogo from '../../../../images/logos/typescript.svg';
@@ -26,8 +28,18 @@ const TechStack = () => {
 
     return (
         <div
-            className="flex items-center justify-center flex-wrap flex-row gap-8 p-8 pt-12"
+            className="relative flex items-center justify-center flex-wrap flex-row gap-8 pb-8 pt-12 px-12"
         >
+            <div
+                className='absolute hidden top-0 left-0 text-sm lg:flex flex-col'
+            >
+                <div>Hover for names</div>
+                <div className='w-full h-full flex justify-center scale-x-[-1]'>
+                    <div className="h-6 w-6">
+                        <img src={arrowSVG} alt="arrow pointing at technology icon" />
+                    </div>
+                </div>
+            </div>
             {json.map(obj => {
                 return <IndividualTech name={obj.name} src={obj.src} />
             })}
