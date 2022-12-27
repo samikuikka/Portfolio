@@ -1,19 +1,19 @@
 ---
 import Glass from "../../Glass.astro";
-import profilePicture from '../../../images/20221220_151554.png';
+import profilePicture from '../../../images/prof-pic.png';
 
 ---
 
 <div class="flex justify-center items-center h-full w-full">
-    <div class="relative w-[330px] h-[370px]">
-        <div class="absolute left-0 bottom-0 w-[300px] h-[350px] z-10">
+    <div class="relative min-w-[320px] min-h-[370px] lg:w-1/2 aspect-[1/1.1]">
+        <div class="absolute left-0 bottom-0 min-w-[300px] min-h-[350px] lg:h-[95%] lg:w-[95%] z-10">
             <Glass>
-                <div class="flex h-full w-full rounded-2xl overflow-hidden">
+                <div class="flex justify-center items-end h-full w-full rounded-2xl overflow-hidden">
                     <img src={profilePicture}/>
                 </div>
             </Glass>
         </div>
-        <div class="prof-bg absolute right-0 top-0 w-[300px] h-[350px] z-0 rounded-3xl"></div>
+        <div class="prof-bg absolute right-0 top-0 w-[300px] h-[350px] lg:h-[95%] lg:w-[95%] z-0 rounded-3xl"></div>
     </div>
 </div>
 
@@ -22,15 +22,8 @@ import profilePicture from '../../../images/20221220_151554.png';
         background: linear-gradient(111.34deg, rgba(232, 121, 249, 0.85) 9.74%, rgba(244, 63, 94, 0.6) 51.32%, rgba(167, 139, 250, 0.96) 100%);
     }
     img {
-        width: 300px;
-        aspect-ratio: 3/3.3;
+        width: 100%;
         object-fit: contain;
-        transform: scale(1.2);
-        -webkit-transition: .3s ease-in-out;
-	    transition: .3s ease-in-out;
-    }
-    img:hover {
-        -webkit-transform: scale(1.3);
-	    transform: scale(1.3) translateY(-0.5rem);
+        border-radius: 24px;
     }
 </style>
