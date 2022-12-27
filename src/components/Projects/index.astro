@@ -1,6 +1,5 @@
 ---
-
-    const width_1 = 10
+import Circle from "../Circle.astro";
 ---
 
 <div
@@ -19,6 +18,15 @@
 
 
     <!-- For background -->
-    <div class="absolute w-[100%] h-[10%] bg-background -top-[5%]  -skew-x-[70deg] rotate-[2deg]"></div>
+    <div class="absolute w-[100%] h-[10%] bg-background -top-[5%]  -skew-x-[70deg] rotate-[2deg] z-[4]"></div>
+
+    <!-- Bakkcground circles -->
+    <div class="absolute top-0 right-0">
+        <Circle extra="z-3"/>
+    </div>
+
+    <div class="absolute bottom-1/4 left-0">
+        <Circle extra="h-72 w-72"/>
+    </div>
 
 </div>

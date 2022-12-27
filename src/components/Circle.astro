@@ -1,9 +1,9 @@
 ---
-
+const { extra } = Astro.props;
 ---
 
 <div
-    class=" h-96 w-96 rounded-full bg-gradient-to-t from-blue-50/0 to-blue-50/80 opacity-50"
+    class={" h-96 w-96 rounded-full bg-gradient-to-t from-blue-50/0 to-blue-50/80 opacity-50" + ' ' + extra}
 >
 
 </div>
