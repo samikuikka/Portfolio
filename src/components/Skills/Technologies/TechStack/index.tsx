@@ -62,7 +62,7 @@ const data = [
     },
     {
         src: tailwindLogo,
-        name: 'Tailwind CSS'
+        name: 'Tailwind'
     },
     {
         src: expressLogo,

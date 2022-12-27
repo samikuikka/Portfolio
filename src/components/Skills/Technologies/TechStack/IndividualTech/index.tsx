@@ -15,7 +15,7 @@ const IndividualTech: React.FC<TechProps> = ({
 }) => {
 
     return (
-        <div className="group h-24 w-24">
+        <div className="group h-24 w-24 relative">
             <div
                 className="h-24 w-24 rounded-3xl
               group-hover:-translate-y-12 ease-in-out duration-500
@@ -36,6 +36,15 @@ const IndividualTech: React.FC<TechProps> = ({
                     </div>
                 </div>
 
+
+            </div>
+            <div
+                className=" absolute bottom-3 left-0 w-full
+                group-hover:transition-all ease-in-out duration-300
+                opacity-0 group-hover:opacity-100 text-center
+                "
+            >
+                    {name}
             </div>
         </div>
     );
