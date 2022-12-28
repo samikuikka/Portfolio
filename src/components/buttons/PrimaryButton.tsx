@@ -1,23 +1,25 @@
 import classNames from 'classnames/dedupe';
-import { solidIcon, Icon } from '../icons';
+import { solidIcon, IconName } from '../icons';
 
 interface ButtonProps {
     name: string;
-    icon?: Icon;
+    icon?: IconName;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    children?: JSX.Element;
 }
 
 const PrimaryButton: React.FC<ButtonProps> = ({
     name,
     icon,
-    onClick
+    onClick,
+    children
 }) => {
 
     return (
         <button
             onClick={onClick}
             className={classNames(
-                "flex flex-row justify-center items-center",
+                "flex flex-row justify-center items-center z-[9999]",
                 'text-md font-medium py-2.5 m-4 text-white-100 ',
                 "h-10  transition-colors rounded-full shadow-lg",
                 'opacity-80 hover:opacity-100',
@@ -27,6 +29,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
             style={{ background: 'linear-gradient(120.86deg, #4C1D95 3.99%, #E11D48 66.93%)'}}
 
         >
+            {children}
             {solidIcon(icon, 'mr-2')}
             {name}
         </button>
