@@ -40,7 +40,7 @@ const Carousel = () => {
             className='flex flex-col w-full h-full justify-center align-center px-[5%]'
         >
             <div
-                className="align-center h-min max-w-full px-16 z-[5]"
+                className="align-center h-min w-full px-16 z-[5]"
             >
                 <Slider {...settings}>
                     {Array(6).fill(1).map((input, i) => {
