@@ -1,5 +1,6 @@
 import Glass from '../../../Glass';
 import soloSVG from '../../../../images/solo.svg';
+import teamSVG from '../../../../images/team.svg';
 import PrimaryButton from '../../../buttons/PrimaryButton';
 import githubSVG from '../../../../images/logos/github.svg';
 
@@ -42,7 +43,11 @@ const ProjectCard: React.FC<ProjectProps> = ({
                         >
                             <h2 className=' text-[1.15vw] font-semibold'>{name}</h2>
                             <div className='flex flex-row gap-2'>
-                                <img src={soloSVG} className="inline" />
+                                {group == 'team' ? (
+                                    <img src={soloSVG} className="inline" />
+                                ) : (
+                                    <img src={teamSVG} className="inline" />
+                                )}
                                 <p>{type}</p>
                             </div>
 
