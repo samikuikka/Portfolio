@@ -3,6 +3,8 @@ import ProjectCard from './ProjectCard';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import './carousel.css';
+import json from './projects.json';
 
 
 
@@ -43,8 +45,8 @@ const Carousel = () => {
                 className="align-center h-min w-full px-16 z-[5]"
             >
                 <Slider {...settings}>
-                    {Array(6).fill(1).map((input, i) => {
-                        return <ProjectCard key="i" />
+                    {json.map((props, i) => {
+                        return <ProjectCard key="i" {...props} />
                     })}
                 </Slider>
 

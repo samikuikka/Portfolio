@@ -1,0 +1,59 @@
+
+[
+    {
+        "name": "Portfolio website",
+        "group": "solo",
+        "type": "Frontend",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit lectus, tempus a eleifend sit amet, pharetra eget sapien. Integer pharetra",
+        "technologies": "Astro, Tailwind, React, TypeScript",
+        "github": "/#"
+    },
+    {
+        "name": "Workout logger",
+        "group": "team",
+        "type": "Fullstack",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit lectus",
+        "technologies": "React, Node, Express, MongoDB, MaterialUI",
+        "github": "/#"
+    },
+    {
+        "name": "AI assisted content creator",
+        "group": "team",
+        "type": "Fullstack",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit lectus",
+        "technologies": "TypeScript, React, Tailwind",
+        "github": "/#"
+    },
+    {
+        "name": "Example project 1",
+        "group": "team",
+        "type": "Frontend",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit lectus, tempus a eleifend sit amet, pharetra eget sapien. Integer pharetra",
+        "technologies": "TypeScript, React, Tailwind",
+        "github": "/#"
+    },
+    {
+        "name": "Example project 2",
+        "group": "team",
+        "type": "Frontend",
+        "description": "hello world",
+        "technologies": "TypeScript, React, Tailwind",
+        "github": "/#"
+    },
+    {
+        "name": "Example project 3",
+        "group": "solo",
+        "type": "Frontend",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit lectus, tempus a eleifend sit amet, pharetra eget sapien. Integer pharetra Quisque tempus sapien at felis rhoncus, et volutpat enim consectetur. Phasellus molestie augue sit amet ultrices tincidunt.",
+        "technologies": "TypeScript, React, Tailwind",
+        "github": "/#"
+    },
+    {
+        "name": "Example project 4",
+        "group": "team",
+        "type": "Fullstack",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit lectus, tempus a eleifend sit amet, pharetra eget sapien. Integer pharetra",
+        "technologies": "TypeScript, React, Tailwind",
+        "github": "/#"
+    }
+]
