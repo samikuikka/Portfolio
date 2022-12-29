@@ -39,10 +39,10 @@ const Carousel = () => {
 
     return (
         <div
-            className='flex flex-col w-full h-full justify-center align-center px-[5%]'
+            className='flex flex-col w-full h-full justify-center align-center min-[400px]:px-[5%]'
         >
             <div
-                className="align-center h-min w-full px-16 z-[5]"
+                className="align-center h-min w-full px-5 md:px-16 z-[5]"
             >
                 <Slider {...settings}>
                     {json.map((props, i) => {

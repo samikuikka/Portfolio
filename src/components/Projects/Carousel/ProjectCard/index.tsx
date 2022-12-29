@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
     return (
         <div className='h-full w-full flex justify-center'>
-            <div className={`w-72 h-80 md:w-96 md:h-full px-[5%] py-[2%]`}>
+            <div className={`w-72 md:w-96 h-full px-[5%] py-[2%]`}>
                 <Glass>
                     <div
                         className={`flex flex-col h-full w-full `}
