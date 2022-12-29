@@ -11,7 +11,7 @@ import json from './projects.json';
 const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 4,
     responsive: [
@@ -20,6 +20,7 @@ const settings = {
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
+                speed: 800
             }
         },
         {
@@ -27,6 +28,7 @@ const settings = {
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
+                speed: 700
             }
         },
         {
@@ -34,6 +36,7 @@ const settings = {
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                speed: 500
             }
         }
     ]
