@@ -1,0 +1,34 @@
+
+/* Arrows */
+
+.own-prev,
+.own-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient(120.86deg, #4C1D95 3.99%, #E11D48 66.93%);;
+    border-radius: 100%;
+    font-size: 20px;
+    color: white;
+    top: 50%;
+    height: 30px;
+    width: 30px;
+    z-index: 99999;
+    opacity: 70%;
+}
+
+.own-prev {
+    left: -25px;
+}
+
+.own-next {
+    right: -25px;
+}
+
+.own-prev:hover,
+.own-next:hover {
+    opacity: 100%;
+}
+
+

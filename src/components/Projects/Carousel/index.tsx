@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './carousel.css';
 import json from './projects.json';
+import { CustomArrowPrev, CustomArrowNext } from './CustomArrow';
 
 
 
@@ -14,6 +15,8 @@ const settings = {
     speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 4,
+    prevArrow: <CustomArrowPrev />,
+    nextArrow: <CustomArrowNext />,
     responsive: [
         {
             breakpoint: 1536,
