@@ -11,9 +11,9 @@ const School: React.FC<SchoolProps> = ({
 }) => {
 
     return (
-        <div className="flex flex-row w-full h-min py-4">
+        <div className="flex flex-row w-full lg:h-min py-4">
             {/** Part 1 */}
-            <div className="flex flex-col items-center pr-4">
+            <div className="flex flex-col items-center pr-2 lg:pr-4">
                 <div className="h-[30px] w-[30px] flex-0">
                     <img src={educationSVG} />
                 </div>
@@ -22,7 +22,7 @@ const School: React.FC<SchoolProps> = ({
             </div>
 
             {/** Info */}
-            <div className="flex-1 text-center text-base pr-4">
+            <div className="flex-1 text-center text-base pr-2 lg:pr-4">
                 {info}
             </div>
 

@@ -19,7 +19,7 @@ const data = [
 const Schools = () => {
 
     return (
-        <div className='flex flex-col flex-1'>
+        <div className='flex flex-col lg:flex-1 z-[10]'>
             {data.map((props) => {
                 return <School {...props} />
             })}
