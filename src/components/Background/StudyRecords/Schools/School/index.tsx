@@ -27,12 +27,10 @@ const School: React.FC<SchoolProps> = ({
             </div>
 
             {/** Description */}
-            <div className="bg-white-100 z-[9]">
             <div className="flex-[2] text-center text-sm text-black">
                 {description}
             </div>
-            </div>
-            
+
         </div>
     );
 }

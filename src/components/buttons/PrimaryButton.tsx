@@ -1,7 +1,7 @@
 import classNames from 'classnames/dedupe';
 import { solidIcon, IconName } from '../icons';
 
-interface ButtonProps {
+export interface ButtonProps {
     name: string;
     icon?: IconName;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;

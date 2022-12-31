@@ -1,6 +1,7 @@
 ---
 import Glass from "../../Glass";
 import Schools from "./Schools";
+import StudyActions from './StudyActions';
 ---
 
 <div class="h-full w-full relative">
@@ -12,13 +13,14 @@ import Schools from "./Schools";
     </div>
 
     <!-- Content layer -->
-    <div class="h-full w-full px-[5%] py-14 absolute top-0">
+    <div class="h-full w-full px-[5%] py-14 absolute top-0 z-[3]">
         <div
-            class="h-full w-full flex flex-col left-0 px-[5%] py-14"
+            class="h-full w-full flex flex-col px-[5%] py-8"
         >
             <div class="px-5 text-3xl pb-[5%]">Education</div>
 
             <Schools />
+            <StudyActions client:visible/>
         </div>
     </div>
 </div>
