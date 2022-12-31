@@ -1,0 +1,24 @@
+---
+import Glass from "../../Glass";
+import Schools from "./Schools";
+---
+
+<div class="h-full w-full relative">
+    <!-- Glass layer -->
+    <div class="h-full w-full px-[5%] py-14 absolute top-0">
+        <Glass>
+            <div class="h-full w-full"></div>
+        </Glass>
+    </div>
+
+    <!-- Content layer -->
+    <div class="h-full w-full px-[5%] py-14 absolute top-0">
+        <div
+            class="h-full w-full flex flex-col left-0 px-[5%] py-14"
+        >
+            <div class="px-5 text-3xl pb-[5%]">Education</div>
+
+            <Schools />
+        </div>
+    </div>
+</div>

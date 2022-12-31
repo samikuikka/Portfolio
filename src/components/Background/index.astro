@@ -1,0 +1,29 @@
+---
+import Triangle from "../Triangle.astro";
+import Circle from "../Circle.astro";
+import StudyRecords from "./StudyRecords/index.astro";
+---
+
+<div
+    class="relative flex flex-col w-full h-screen bg-gradient-to-bl from-violet-400/80 via-rose-500/60 to-fuchsia-400 overflow-hidden"
+>
+    <!-- Background shapes -->
+    <div class="absolute bottom-[-30px] left-[-30px] z-[1]">
+        <Circle />
+    </div>
+    <!-- Header -->
+    <div class="flex flex-row w-full md:w-1/2 justify-center pt-[3%]">
+        <h1 class="text-5xl">Background</h1>
+    </div>
+
+    <div class="flex-1 flex flex-row">
+        <div class="flex-1">
+            <StudyRecords />
+        </div>
+        <div class="flex-1">SOME TEXT</div>
+    </div>
+
+    <div class="absolute right-[-10px] top-[15%] rotate-[-120deg]">
+        <Triangle size="300" />
+    </div>
+</div>

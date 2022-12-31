@@ -1,7 +1,9 @@
 ---
+
+const { size } = Astro.props;
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="500" height="500">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width={`${size ? size : 500}`} height={`${size ? size : 500}`}>
     <defs>
         <linearGradient id="gradient" x1="00%" y1="0%" x2="0%" y2="100%">
           <stop offset="5%" stop-color="#D9D9D9"  stop-opacity="0" />
