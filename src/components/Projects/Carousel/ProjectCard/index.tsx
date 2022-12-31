@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
                         <div
                             className='flex flex-col px-4 pt-4'
                         >
-                            <h2 className=' text-[1.15vw] font-semibold'>{name}</h2>
+                            <h2 className=' text-base lg:text-lg font-semibold'>{name}</h2>
                             <div className='flex flex-row gap-2'>
                                 {group == 'team' ? (
                                     <img src={soloSVG} className="inline" />
