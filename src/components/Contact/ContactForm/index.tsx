@@ -5,7 +5,7 @@ import Form from './Form';
 const ContactForm = () => {
 
     return (
-        <div className='h-full w-full px-[3%] py-[5%] '>
+        <div className='h-full w-full px-2 mobile:px-[3%] py-[5%] '>
             <Glass>
                 <div className='relative h-full w-full'>
                     {/** Circle */}
@@ -14,9 +14,9 @@ const ContactForm = () => {
                     </div>
 
                     {/** Content */}
-                    <div className='flex flex-col h-full w-full px-4 py-4 relative z-[3]'>
+                    <div className='flex flex-col h-full w-full px-2 mobile:px-4 py-4 relative z-[3]'>
                         {/** Header */}
-                        <div className='w-full text-center text-2xl'>
+                        <div className='w-full text-center text-2xl pb-6'>
                             By form:
                         </div>
 

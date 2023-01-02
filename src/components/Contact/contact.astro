@@ -7,10 +7,10 @@ import ContactForm from "./ContactForm";
 
 
 <div
-    class="relative flex flex-col w-full h-screen bg-gradient-to-tl from-violet-400/80 via-rose-500/60 to-fuchsia-400 overflow-hidden"
+    class="relative flex flex-col w-full lg:h-screen bg-gradient-to-tl from-violet-400/80 via-rose-500/60 to-fuchsia-400 overflow-hidden"
 >
     <!-- Header -->
-    <div class="flex flex-row w-full md:w-1/2 justify-center pt-[3%]">
+    <div class="flex flex-row w-full lg:w-1/2 justify-center pt-[3%]">
         <div class="flex flex-col text-center">
             <h1 class="text-5xl">Contact</h1>
             <h3 class="text-2xl pt-4">By email: samikuikka@outlook.com</h3>
@@ -18,8 +18,8 @@ import ContactForm from "./ContactForm";
     </div>
 
     <!-- Content -->
-    <div class="h-full w-full flex flex-row">
-        <div class="flex-1 flex flex-col justify-end">
+    <div class="h-full w-full flex flex-col lg:flex-row">
+        <div class="flex-1 flex flex-col justify-end order-last lg:order-first">
             <img src={drawing}/>
         </div>
         <div class="flex-1">
@@ -28,8 +28,4 @@ import ContactForm from "./ContactForm";
 
     </div>
 
-    <!-- Circle -->
-    <!-- <div class="absolute right-[-50px] bottom-8">
-        <Circle extra="h-80 w-80"/>
-    </div> -->
 </div>

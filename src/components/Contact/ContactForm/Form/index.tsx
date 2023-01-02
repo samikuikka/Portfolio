@@ -46,8 +46,8 @@ const Form = () => {
     emailErrors = validateInput(validatedEmail);
 
     return (
-        <div className="flex flex-col px-[10%] h-full">
-            <div className="flex flex-col flex-1 justify-evenly">
+        <div className="flex flex-col px-2 mobile:px-[10%] h-full gap-6">
+            <div className="flex flex-col flex-1 justify-evenly gap-6">
                 <Input
                     type="text"
                     value={name}
@@ -65,7 +65,7 @@ const Form = () => {
                     errors={emailErrors}
                 />
             </div>
-            <div className="flex-1 flex flex-col">
+            <div className="flex-1 flex flex-col gap-6">
                 <TextArea
                     placeholder="Message"
                     label="Optional message"
