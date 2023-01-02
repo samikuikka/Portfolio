@@ -1,33 +1,37 @@
 import classNames from 'classnames/dedupe';
 import { solidIcon, IconName } from '../icons';
+import './button.css'
 
 export interface ButtonProps {
     name: string;
     icon?: IconName;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     children?: JSX.Element;
+    disabled?: boolean;
 }
 
 const PrimaryButton: React.FC<ButtonProps> = ({
     name,
     icon,
     onClick,
-    children
+    children,
+    disabled
 }) => {
 
     return (
         <button
             onClick={onClick}
             className={classNames(
-                "flex flex-row justify-center items-center z-[9999]",
+                "button-style flex flex-row justify-center items-center z-[9999]",
                 'text-md font-medium py-2.5 m-4 text-white-100 ',
                 "h-10  transition-colors rounded-full shadow-lg",
-                'opacity-80 hover:opacity-100',
+                "bg-gradient-to-br from-violet-900 to-rose-600",
                 { 'pl-4 pr-6': icon },
                 { 'px-6': !icon },
+                {'opacity-80 hover:opacity-100': !disabled},
+                {'opacity-40': disabled}
             )}
-            style={{ background: 'linear-gradient(120.86deg, #4C1D95 3.99%, #E11D48 66.93%)'}}
-
+            disabled={disabled}
         >
             {children}
             {solidIcon(icon, 'mr-2')}

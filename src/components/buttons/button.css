@@ -1,0 +1,9 @@
+
+.button-style {
+    background: linear-gradient(120.86deg, #4C1D95 3.99%, #E11D48 66.93%);
+
+}
+
+.button-style:disabled {
+    background: gray;
+}

@@ -45,6 +45,14 @@ const Form = () => {
     nameErrors = validateInput(validatedName);
     emailErrors = validateInput(validatedEmail);
 
+    const disabled: boolean = !validatedName.success || !validatedEmail.success
+    console.log(disabled)
+    // Send form
+    const sendForm = () => {
+
+        console.log('hello world');
+    }
+
     return (
         <div className="flex flex-col px-2 mobile:px-[10%] h-full gap-6">
             <div className="flex flex-col flex-1 justify-evenly gap-6">
@@ -74,7 +82,8 @@ const Form = () => {
                 />
                 <PrimaryButton
                     name="Submit"
-
+                    onClick={sendForm}
+                    disabled={disabled}
                 />
             </div>
         </div>
