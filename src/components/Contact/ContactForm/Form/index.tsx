@@ -1,8 +1,9 @@
 import Input from "../../../Input";
 import TextArea from "../../../TextArea";
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import { z } from "zod";
 import PrimaryButton from "../../../buttons/PrimaryButton";
+import emailjs from '@emailjs/browser';
 
 /**
 * Contact form
@@ -36,6 +37,9 @@ const Form = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    const form = useRef<HTMLFormElement>(null)
+
+
     let nameErrors = '';
     let emailErrors = '';
 
@@ -46,15 +50,44 @@ const Form = () => {
     emailErrors = validateInput(validatedEmail);
 
     const disabled: boolean = !validatedName.success || !validatedEmail.success
-    console.log(disabled)
-    // Send form
-    const sendForm = () => {
+    
 
-        console.log('hello world');
+    // Send form
+    const sendEmail = (e: React.FormEvent) => {
+        e.preventDefault();
+        
+        const data = {
+            service_id: 'service_cqx0upd',
+            template_id: 'contact_form',
+            user_id: 'XgOYXkWH98YXwZtGo',
+            template_params: {
+                name: name,
+                email: email,
+                message: message
+            }
+        }
+
+        fetch('https://api.emailjs.com/api/v1.0/email/send', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data),
+        }).then( (result) => {
+            console.log(result.text);
+        })
+        
+        setName('');
+        setEmail('');
+        setMessage('');        
     }
 
     return (
-        <div className="flex flex-col px-2 mobile:px-[10%] h-full gap-6">
+        <form 
+            ref={form} 
+            className="flex flex-col px-2 mobile:px-[10%] h-full gap-6"
+            onSubmit={sendEmail}
+        >
             <div className="flex flex-col flex-1 justify-evenly gap-6">
                 <Input
                     type="text"
@@ -82,11 +115,11 @@ const Form = () => {
                 />
                 <PrimaryButton
                     name="Submit"
-                    onClick={sendForm}
+                    type="submit"
                     disabled={disabled}
                 />
             </div>
-        </div>
+        </form>
     );
 };
 

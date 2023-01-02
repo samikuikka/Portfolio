@@ -8,6 +8,7 @@ export interface ButtonProps {
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     children?: JSX.Element;
     disabled?: boolean;
+    type?: 'submit';
 }
 
 const PrimaryButton: React.FC<ButtonProps> = ({
@@ -15,11 +16,13 @@ const PrimaryButton: React.FC<ButtonProps> = ({
     icon,
     onClick,
     children,
-    disabled
+    disabled,
+    type,
 }) => {
 
     return (
         <button
+            type={type ? type : 'button'}
             onClick={onClick}
             className={classNames(
                 "button-style flex flex-row justify-center items-center z-[9999]",
