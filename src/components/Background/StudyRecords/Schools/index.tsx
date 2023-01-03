@@ -8,7 +8,7 @@ const data = [
     },
     {
         info: "Aalto University - Computer Science (Bachelor’s level) (2019- )",
-        description: "I started my Bachelor’s degree at 2019, conscription prolonged the graduation. 175 / 180 ECTS credits done (1 course away from graduation) 4,58 GPA"
+        description: "I started my Bachelor’s degree at 2019. 175 / 180 ECTS credits done (1 course away from graduation) 4,58 GPA"
     },
     {
         info: "Aalto University - Web Technologies, Application and Technologies (Master’s level)",
