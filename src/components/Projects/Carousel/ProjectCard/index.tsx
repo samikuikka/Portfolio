@@ -21,7 +21,8 @@ interface ProjectProps {
     description: string;
     technologies: string;
     github: string;
-    links?: [Link]
+    links?: [Link];
+    image?: string;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
@@ -31,7 +32,8 @@ const ProjectCard: React.FC<ProjectProps> = ({
     description,
     technologies,
     github,
-    links
+    links,
+    image
 }) => {
 
 
@@ -61,15 +63,19 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
                         {/** Screenshot of the project */}
                         <div className='flex flex-col justify-center w-full h-52 py-4'>
-                            <img className=' object-contain' src="http://placekitten.com/440/200" />
+                            {image ? (
+                                <img className=' object-contain' src={image} />)
+                                : (
+                                <img className=' object-contain' src="http://placekitten.com/440/200" />
+                                )}
                         </div>
 
                         {/** Description */}
                         <p className='flex-1 p-4 text-xs z-10'>
-                            {description }
-                            <br/>
-                            {links?.map( link => {
-                                return <a href={link.url} target="_blank" className=' text-blue-600 hover:underline'>{link.label}</a>
+                            {description}
+                            <br />
+                            {links?.map(link => {
+                                return <><a href={link.url} target="_blank" className='text-sm text-blue-600 hover:underline'>{link.label}</a> <br /></>
                             })}
                         </p>
 
@@ -86,13 +92,13 @@ const ProjectCard: React.FC<ProjectProps> = ({
                             </div>
                             {/** GitHub */}
                             <div className='h-full flex flex-col justify-end'>
-                                    <PrimaryButton
-                                        name="GitHub"
-                                        onClick={() => window.open(github, '_blank', 'noreferrer')}
-                                    >
-                                        <div className="h-6 w-6 mr-2"><img src={githubSVG} /></div>
-                                    </PrimaryButton>
-                                
+                                <PrimaryButton
+                                    name="GitHub"
+                                    onClick={() => window.open(github, '_blank', 'noreferrer')}
+                                >
+                                    <div className="h-6 w-6 mr-2"><img src={githubSVG} /></div>
+                                </PrimaryButton>
+
                             </div>
                         </div>
 
