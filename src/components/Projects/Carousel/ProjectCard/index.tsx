@@ -9,6 +9,11 @@ import githubSVG from '../../../../images/logos/github.svg';
  * 
 */
 
+interface Link {
+    url: string;
+    label: string;
+}
+
 interface ProjectProps {
     name: string;
     group: string;
@@ -16,6 +21,7 @@ interface ProjectProps {
     description: string;
     technologies: string;
     github: string;
+    links?: [Link]
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
@@ -24,10 +30,10 @@ const ProjectCard: React.FC<ProjectProps> = ({
     type,
     description,
     technologies,
-    github
+    github,
+    links
 }) => {
-    /*  const { height, width } = useWindowDimensions();
-     const card_h = Math.floor(height * 0.35); */
+
 
     return (
         <div className='h-full w-full flex justify-center'>
@@ -43,7 +49,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
                         >
                             <h2 className=' text-base lg:text-lg font-semibold'>{name}</h2>
                             <div className='flex flex-row gap-2'>
-                                {group == 'team' ? (
+                                {group == 'solo' ? (
                                     <img src={soloSVG} className="inline" />
                                 ) : (
                                     <img src={teamSVG} className="inline" />
@@ -59,9 +65,13 @@ const ProjectCard: React.FC<ProjectProps> = ({
                         </div>
 
                         {/** Description */}
-                        <div className='flex-1 p-4 text-xs'>
-                            {description}
-                        </div>
+                        <p className='flex-1 p-4 text-xs z-10'>
+                            {description }
+                            <br/>
+                            {links?.map( link => {
+                                return <a href={link.url} target="_blank" className=' text-blue-600 hover:underline'>{link.label}</a>
+                            })}
+                        </p>
 
                         {/** Actions */}
                         <div className="h-24 w-full pl-4 flex flex-row">
@@ -76,9 +86,13 @@ const ProjectCard: React.FC<ProjectProps> = ({
                             </div>
                             {/** GitHub */}
                             <div className='h-full flex flex-col justify-end'>
-                                <PrimaryButton name="GitHub">
-                                    <div className="h-6 w-6 mr-2"><img src={githubSVG}/></div>
-                                </PrimaryButton>
+                                    <PrimaryButton
+                                        name="GitHub"
+                                        onClick={() => window.open(github, '_blank', 'noreferrer')}
+                                    >
+                                        <div className="h-6 w-6 mr-2"><img src={githubSVG} /></div>
+                                    </PrimaryButton>
+                                
                             </div>
                         </div>
 

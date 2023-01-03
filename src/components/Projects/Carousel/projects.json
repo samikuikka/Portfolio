@@ -4,17 +4,23 @@
         "name": "Portfolio website",
         "group": "solo",
         "type": "Frontend",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit lectus, tempus a eleifend sit amet, pharetra eget sapien. Integer pharetra",
+        "description": "This website is an fullstack Astro js application using React components. TypeScript used in the components and Tailwind CSS  for styling. Website designed using Figma",
         "technologies": "Astro, Tailwind, React, TypeScript",
-        "github": "/#"
+        "links": [
+            {
+                "url": "https://www.figma.com/file/BgN5KwqIHYnI9upxdVPz3M/Portfolio?node-id=52797%3A25955&t=4kHrbned5hTjqBfm-1",
+                "label": "Figma design"
+            }
+        ],
+        "github": "https://github.com/samikuikka/Portfolio"
     },
     {
         "name": "Workout logger",
         "group": "team",
         "type": "Fullstack",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit lectus",
+        "description": "Fullstack application for keeping track of gym exercises. I created Node.js, Express backend RESTFUL API for retrieving data from the MongoDB batabase. I also created the login and register in the frontend side of the project which used React and MaterialUI.",
         "technologies": "React, Node, Express, MongoDB, MaterialUI",
-        "github": "/#"
+        "github": "https://github.com/samikuikka/workout-logger-backend"
     },
     {
         "name": "AI assisted content creator",
