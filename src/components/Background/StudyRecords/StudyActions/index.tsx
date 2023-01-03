@@ -4,7 +4,17 @@ import TextButton from '../../../buttons/TextButton';
 const StudyActions = () => {
 
     const showRecord = () => {
-        alert('Not implemented yet');
+        fetch('study-record.pdf').then(response => {
+            response.blob().then(blob => {
+
+                const fileURL = window.URL.createObjectURL(blob);
+
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'study-record.pdf';
+                alink.click();
+            })
+        })
     }
 
     return (
