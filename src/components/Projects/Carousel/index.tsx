@@ -59,7 +59,7 @@ const Carousel = () => {
             >
                 <Slider {...settings}>
                     {json.map((props, i) => {
-                        return <ProjectCard key="i" {...props} />
+                        return <ProjectCard key={i} {...props} />
                     })}
                 </Slider>
 

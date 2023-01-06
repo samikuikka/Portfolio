@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { ArrowDownTrayIcon } from '@heroicons/react/24/solid';
+import { ArrowDownTrayIcon } from '@heroicons/react/24/solid/index.js';
 export type IconName = 'DownloadIcon';
 
 // HeroIcons

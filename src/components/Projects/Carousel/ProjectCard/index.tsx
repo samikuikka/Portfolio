@@ -9,10 +9,6 @@ import githubSVG from '../../../../images/logos/github.svg';
  * 
 */
 
-interface Link {
-    url: string;
-    label: string;
-}
 
 interface ProjectProps {
     name: string;
@@ -21,7 +17,7 @@ interface ProjectProps {
     description: string;
     technologies: string;
     github: string;
-    links?: [Link];
+    links: { url: string; label: string; }[];
     image?: string;
 }
 
@@ -62,7 +58,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
                         </div>
 
                         {/** Screenshot of the project */}
-                        <div className='flex flex-col justify-center w-full h-52 py-4'>
+                        <div className='flex flex-col justify-center w-full h-min py-4'>
                             {image ? (
                                 <img className=' object-contain' src={image} />)
                                 : (
@@ -71,7 +67,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
                         </div>
 
                         {/** Description */}
-                        <p className='flex-1 p-4 text-xs z-10'>
+                        <p className='flex-1 p-2 pt-0 text-xs z-10'>
                             {description}
                             <br />
                             {links?.map(link => {
@@ -80,7 +76,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
                         </p>
 
                         {/** Actions */}
-                        <div className="h-24 w-full pl-4 flex flex-row">
+                        <div className="min-h-24 w-full pl-4 flex flex-row">
                             {/** Tech stack */}
                             <div className="h-full flex-1 pb-4 flex flex-col justify-end">
                                 <div className="text-xs">
