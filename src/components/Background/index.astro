@@ -5,7 +5,7 @@ import StudyRecords from "./StudyRecords/index.astro";
 ---
 
 <div
-    class="relative flex flex-col w-full xl:h-screen bg-gradient-to-bl from-violet-400/80 via-rose-500/60 to-fuchsia-400 overflow-hidden"
+    class="relative flex flex-col w-full xl:min-h-screen bg-gradient-to-bl from-violet-400/80 via-rose-500/60 to-fuchsia-400 overflow-hidden"
     id="background"
 >
     <!-- Background shapes -->
@@ -18,7 +18,7 @@ import StudyRecords from "./StudyRecords/index.astro";
     </div>
 
     <!-- Content -->
-    <div class="h-min lg:flex-1 flex flex-col lg:flex-row">
+    <div class="info h-min lg:flex-1 flex flex-col lg:flex-row">
         <div class="lg:flex-[8]">
             <StudyRecords />
         </div>
@@ -34,3 +34,4 @@ import StudyRecords from "./StudyRecords/index.astro";
         <Triangle size="300" />
     </div>
 </div>
+
