@@ -1,4 +1,3 @@
-
 # Portfolio
 
 Welcome to my Portfolio's GitHub repository.
@@ -17,3 +16,5 @@ Styling is done with [TailwindCSS](https://tailwindcss.com/) and the style insip
 
     npm i
     npm run dev
+
+![](public/portfolio.png)
