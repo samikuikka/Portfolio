@@ -1,0 +1,39 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import Glass from "../components/Glass/AstroGlass.astro";
+
+type Props = MarkdownLayoutProps<{
+    // Define frontmatter props here
+    title: string;
+    author: string;
+    date: string;
+}>;
+
+const { frontmatter, url } = Astro.props;
+---
+
+<html>
+    <head>
+        <title>{frontmatter.title}</title>
+    </head>
+    <body>
+        <div
+            class="w-full bg-gradient-to-tl from-violet-400/80 via-rose-500/60 to-fuchsia-400"
+        >
+            
+            <div class="flex justify-center py-16">
+                <div>
+                    <Glass>
+                        <div class="px-7 py-3">
+                            <article class="prose lg:prose-lg">
+                                <slot />     
+                            </article>
+                        </div>
+                    </Glass>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
