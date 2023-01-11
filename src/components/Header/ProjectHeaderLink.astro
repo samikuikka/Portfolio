@@ -1,0 +1,8 @@
+---
+const { name, href } = Astro.props;
+---
+
+<div class="flex flex-col">
+    <a href={href} class="block peer hover:text-red-500 text-xl">{name}</a>
+    <div class="h-0.5 w-full bg-gradient-to-br from-violet-900 to-rose-600 invisible peer-hover:visible  "/>
+</div>
