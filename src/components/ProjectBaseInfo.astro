@@ -1,0 +1,19 @@
+---
+const { type, title } = Astro.props;
+import soloSVG from "../images/solo.svg";
+import teamSVG from "../images/team.svg";
+---
+
+<div class="not-prose w-full text-center">
+    <h1 class="text-3xl font-bold tracking-wide text-black">{title}</h1>
+    <div class="gap-1 flex items-center justify-center">
+        {
+            type == "solo" ? (
+                <img src={soloSVG} class="inline h-6 w-6" />
+            ) : (
+                <img src={teamSVG} class="inline h-6 w-6" />
+            )
+        }
+        {type}
+    </div>
+</div>

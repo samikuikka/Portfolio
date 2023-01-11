@@ -2,10 +2,12 @@
 import type { MarkdownLayoutProps } from "astro";
 import Glass from "../components/Glass/AstroGlass.astro";
 import Header from "../components/Header/ProjectHeader.astro";
+import ProjectBaseInfo from '../components/ProjectBaseInfo.astro';
 
 type Props = MarkdownLayoutProps<{
     // Define frontmatter props here
     title: string;
+    type: string;
     describtion: string;
     author: string;
     date: string;
@@ -30,9 +32,12 @@ const { frontmatter, url } = Astro.props;
                             <!-- Nav -->
                             <Header />
 
-                            <article class="prose lg:prose-lg">
-                                <!-- <h2>About</h2>
-                                <p>{frontmatter.describtion}</p> -->
+                            <article class="prose lg:prose-lg pt-3">
+
+                                <ProjectBaseInfo title={frontmatter.title} type={frontmatter.type} />
+                                
+                                <h2>About</h2>
+                                <p>{frontmatter.describtion}</p>
                                 
                                 <slot />
                             </article>
