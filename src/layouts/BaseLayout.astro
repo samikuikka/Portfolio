@@ -14,8 +14,7 @@ type Props = MarkdownLayoutProps<{
     website: string;
     describtion: string;
     technologies: [string];
-    author: string;
-    date: string;
+    screenshots: [string];
 }>;
 
 const { frontmatter, url } = Astro.props;
@@ -56,7 +55,10 @@ const { frontmatter, url } = Astro.props;
                                 <slot />
 
                                 <h2>Screenshots</h2>
-                                <ScreenshotCarousel client:only="react" />
+                                <ScreenshotCarousel
+                                    screenshots={frontmatter.screenshots} 
+                                    client:only="react" 
+                                />
                                 
 
                             </article>
