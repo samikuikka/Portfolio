@@ -1,0 +1,48 @@
+---
+const { type, title, github, website } = Astro.props;
+import soloSVG from "../images/solo.svg";
+import teamSVG from "../images/team.svg";
+import { Icon } from "astro-icon";
+---
+
+<div class="not-prose w-full text-center flex flex-col gap-10">
+    <div>
+        <h1 class="text-3xl font-bold tracking-wide text-black">{title}</h1>
+        <div class="gap-1 flex items-center justify-center">
+            {
+                type == "solo" ? (
+                    <img src={soloSVG} class="inline h-6 w-6" />
+                ) : (
+                    <img src={teamSVG} class="inline h-6 w-6" />
+                )
+            }
+            {type}
+        </div>
+    </div>
+    <div
+        class="w-full flex flex-row justify-center gap-8 border-t border-b border-black"
+    >
+        <div class="flex flex-row items-center gap-1">
+            <Icon pack="mdi" name="github" class="w-6 h-6" />
+            <a
+                href={github}
+                target="_blank"
+                class="font-medium text-blue-600 hover:underline">GitHub</a
+            >
+        </div>
+        {
+            website && (
+                <div class="flex flex-row items-center gap-1">
+                    <Icon pack="mdi" name="globe" class="w-6 h-6" />
+                    <a
+                        href={website}
+                        target="_blank"
+                        class="font-medium text-blue-600 hover:underline"
+                    >
+                        Website
+                    </a>
+                </div>
+            )
+        }
+    </div>
+</div>

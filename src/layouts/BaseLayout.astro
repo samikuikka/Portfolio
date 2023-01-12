@@ -2,11 +2,17 @@
 import type { MarkdownLayoutProps } from "astro";
 import Glass from "../components/Glass/AstroGlass.astro";
 import Header from "../components/Header/ProjectHeader.astro";
+import ProjectBaseInfo from '../components/ProjectBaseInfo.astro';
+import Technologies from '../components/ProjectTechnologies/Technologies.astro';
 
 type Props = MarkdownLayoutProps<{
     // Define frontmatter props here
     title: string;
+    type: string;
+    github: string;
+    website: string;
     describtion: string;
+    technologies: [string];
     author: string;
     date: string;
 }>;
@@ -17,23 +23,35 @@ const { frontmatter, url } = Astro.props;
 <html>
     <head>
         <title>{frontmatter.title}</title>
+        <link href="/prism-atom-dark.css" rel="stylesheet" />
     </head>
     <body>
         <div
             class="w-full bg-gradient-to-tl from-violet-400/80 via-rose-500/60 to-fuchsia-400"
         >
-            <div class="flex justify-center py-16">
+            <div class="flex justify-center py-5 md:py-16">
                 <div>
                     <Glass>
                         <!-- Content -->
-                        <div class="px-7 py-3">
+                        <div class="px-4 py-2 md:px-7 md:py-3">
                             <!-- Nav -->
                             <Header />
 
-                            <article class="prose lg:prose-lg">
-                                <!-- <h2>About</h2>
-                                <p>{frontmatter.describtion}</p> -->
+                            <article class="prose-sm md:prose lg:prose-lg xl:prose-xl pt-3">
+
+                                <ProjectBaseInfo 
+                                    title={frontmatter.title}
+                                    type={frontmatter.type} 
+                                    github={frontmatter.github}
+                                    website={frontmatter.website}
+                                />
                                 
+                                <h2>About</h2>
+                                <p>{frontmatter.describtion}</p>
+
+                                <h2>Technologies</h2>
+                                <Technologies technologies={frontmatter.technologies} />
+
                                 <slot />
                             </article>
                         </div>
