@@ -8,13 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "prepare": "husky install",
-    "eslint": "npx eslint --fix .",
-    "prettier": "npm prettier --write",
-    "execute-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
-    "lint": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint-fix": "npm run lint -- --fix"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.12.2",
@@ -39,21 +33,6 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
-    "@types/react-slick": "^0.23.10",
-    "eslint": "^8.31.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.0",
-    "prettier": "2.8.2"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx, ts, tsx}": [
-      "eslint . --fix",
-      "prettier --write ."
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "@types/react-slick": "^0.23.10"
   }
 }
