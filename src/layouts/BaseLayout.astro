@@ -4,6 +4,7 @@ import Glass from "../components/Glass/AstroGlass.astro";
 import Header from "../components/Header/ProjectHeader.astro";
 import ProjectBaseInfo from '../components/ProjectBaseInfo.astro';
 import Technologies from '../components/ProjectTechnologies/Technologies.astro';
+import ScreenshotCarousel from '../components/ScreenshotCarousel';
 
 type Props = MarkdownLayoutProps<{
     // Define frontmatter props here
@@ -53,6 +54,11 @@ const { frontmatter, url } = Astro.props;
                                 <Technologies technologies={frontmatter.technologies} />
 
                                 <slot />
+
+                                <h2>Screenshots</h2>
+                                <ScreenshotCarousel client:only="react" />
+                                
+
                             </article>
                         </div>
                     </Glass>
