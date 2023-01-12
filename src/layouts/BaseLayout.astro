@@ -3,6 +3,7 @@ import type { MarkdownLayoutProps } from "astro";
 import Glass from "../components/Glass/AstroGlass.astro";
 import Header from "../components/Header/ProjectHeader.astro";
 import ProjectBaseInfo from '../components/ProjectBaseInfo.astro';
+import Technologies from '../components/ProjectTechnologies/Technologies.astro';
 
 type Props = MarkdownLayoutProps<{
     // Define frontmatter props here
@@ -11,6 +12,7 @@ type Props = MarkdownLayoutProps<{
     github: string;
     website: string;
     describtion: string;
+    technologies: [string];
     author: string;
     date: string;
 }>;
@@ -45,6 +47,9 @@ const { frontmatter, url } = Astro.props;
                                 
                                 <h2>About</h2>
                                 <p>{frontmatter.describtion}</p>
+
+                                <h2>Technologies</h2>
+                                <Technologies technologies={frontmatter.technologies} />
                                 
                                 <slot />
                             </article>
