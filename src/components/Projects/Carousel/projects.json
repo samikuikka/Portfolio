@@ -4,7 +4,7 @@
         "name": "Portfolio website",
         "group": "solo",
         "type": "Frontend",
-        "description": "This website is an fullstack Astro js application using React components. TypeScript used in the components and Tailwind CSS  for styling. Website designed using Figma",
+        "description": "This website is an frontend Astro js application using React components. TypeScript used in the components and Tailwind CSS  for styling. Website designed using Figma",
         "technologies": "Astro, Tailwind, React, TypeScript",
         "links": [
             {
