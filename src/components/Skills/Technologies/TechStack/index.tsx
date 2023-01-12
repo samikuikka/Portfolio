@@ -40,8 +40,8 @@ const TechStack = () => {
                     </div>
                 </div>
             </div>
-            {json.map(obj => {
-                return <IndividualTech name={obj.name} src={obj.src} />
+            {json.map((obj, i) => {
+                return <IndividualTech name={obj.name} src={obj.src} key={i} />
             })}
         </div>
     );
