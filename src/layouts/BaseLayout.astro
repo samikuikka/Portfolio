@@ -10,6 +10,7 @@ type Props = MarkdownLayoutProps<{
     // Define frontmatter props here
     title: string;
     type: string;
+    project: string;
     github: string;
     website: string;
     describtion: string;
@@ -44,6 +45,7 @@ const { frontmatter, url } = Astro.props;
                                     type={frontmatter.type} 
                                     github={frontmatter.github}
                                     website={frontmatter.website}
+                                    project={frontmatter.project}
                                 />
                                 
                                 <h2>About</h2>
