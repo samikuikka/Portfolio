@@ -51,16 +51,17 @@ const { frontmatter, url } = Astro.props;
                                 <h2>About</h2>
                                 <p>{frontmatter.describtion}</p>
 
-                                <h2>Technologies</h2>
-                                <Technologies technologies={frontmatter.technologies} />
-
-                                <slot />
-
                                 <h2>Screenshots</h2>
                                 <ScreenshotCarousel
                                     screenshots={frontmatter.screenshots} 
                                     client:only="react" 
                                 />
+
+                                <h2>Technologies</h2>
+                                <Technologies technologies={frontmatter.technologies} />
+
+                                <slot />
+
                                 
 
                             </article>
