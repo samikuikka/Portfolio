@@ -3,7 +3,7 @@ const { technologies } = Astro.props;
 import { Icon } from "astro-icon";
 ---
 
-<div class="not-prose w-full flex flex-row gap-3">
+<div class="not-prose w-full flex flex-row flex-wrap gap-3">
     {
         technologies.map((technology: {name: string, logo?: string}) => {
             return (
