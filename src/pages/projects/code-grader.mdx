@@ -49,23 +49,20 @@ not them installed
         1.1. Go to grader-image folder
         1.2. Build the container
 
-```bash
-  docker build -t grader-image .
-```
+<Prism lang="bash" code="docker build -t grader-image ." />
+
 
     2. Go to folder containing the docker-compose.yml and run the docker compose
       function
 
-```bash
-docker-compose up --build
-```
+<Prism lang="bash" code="docker-compose up --build" />
+
 
 or
 
-```bash
-docker-compose build --no-cache
-docker-compose up
-```
+<Prism lang="bash" code={`docker-compose build --no-cache
+docker-compose up`} />
+
 
 !! If your system has containers with same names than the ones in the
 docker-compose, rename the container names and start again.
