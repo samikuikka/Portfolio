@@ -1,0 +1,82 @@
+---
+layout: ../../layouts/BaseLayout.astro
+title: "Code grader"
+type: "solo"
+project: "fullstack"
+github: "https://github.com/samikuikka/code-grader"
+technologies:
+  [
+    { name: "react" },
+    { name: "astro" },
+    { name: "docker" },
+    { name: "redis" },
+    { name: "deno" },
+    { name: "postgresql"}
+  ]
+describtion: "Fullstack application for grading user submitted code for coding problems.
+Backend focused project.
+WebSocket communication between frontend and backend.
+Queue service to respond to high volumes of request to the backend.
+Redis used to cache requests to the backend.
+Submission requests saved to the postgeSQL database.
+Project submission for Scalable web applications course.
+"
+screenshots: ["/screenshots/code-grader-1.png", '/screenshots/code-grader-2.png', '/screenshots/code-grader-3.png']
+---
+
+import { Prism } from "@astrojs/prism";
+
+## About the application
+
+This project was focused on backend.
+
+Frontend send requests containing a submission to the coding problem to the backend.
+
+Backend puts requests in to the queue which processes them one-by-one.
+
+Mock grading service grades the submission and the answer from the service is send back to the frontend via WebSockets.
+
+User's submission are stored in the **PotsgeSQL** database and submission are also stored to the **Redis** cache in order to give result for the submission faster.
+
+## Running the application
+
+Prerequisites: Docker and docker-compose. Check out
+[Docker Desktop](https://www.docker.com/products/docker-desktop/) if you have
+not them installed
+
+    1. Create the grader docker image
+        If you don't have grader-image in as Docker container then:
+        1.1. Go to grader-image folder
+        1.2. Build the container
+
+```bash
+  docker build -t grader-image .
+```
+
+    2. Go to folder containing the docker-compose.yml and run the docker compose
+      function
+
+```bash
+docker-compose up --build
+```
+
+or
+
+```bash
+docker-compose build --no-cache
+docker-compose up
+```
+
+!! If your system has containers with same names than the ones in the
+docker-compose, rename the container names and start again.
+
+3. Wait until **flyway** has loaded.
+
+The actual website is available faster than the actual database when first
+running the program. Please wait until flyway notifies you about it successfully
+migrating to version 1 of database.
+
+3. Open the application in [http://localhost:8000](http://localhost:8000) If any
+   of the steps fails, please close the container instance and repeat these
+   steps. If API did not start with the first try, try running
+   `docker-compose up --build` again.
