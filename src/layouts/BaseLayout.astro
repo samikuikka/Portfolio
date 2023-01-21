@@ -14,8 +14,8 @@ type Props = MarkdownLayoutProps<{
     github: string;
     website: string;
     describtion: string;
-    technologies: [string];
-    screenshots: [string];
+    technologies: string[];
+    screenshots: string[];
 }>;
 
 const { frontmatter, url } = Astro.props;

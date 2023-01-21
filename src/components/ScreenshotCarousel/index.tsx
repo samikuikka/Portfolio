@@ -23,13 +23,12 @@ const settings = {
 }
 
 interface CarouselProps {
-    screenshots: [string];
+    screenshots: string[];
 }
 
 const ScreenshotCarousel: React.FC<CarouselProps> = ({
     screenshots
 }) => {
-
     return (
         <div className='block not-prose pb-10 w-full'>
             <div className='max-w-[80vw] md:max-w-none m-auto'>
