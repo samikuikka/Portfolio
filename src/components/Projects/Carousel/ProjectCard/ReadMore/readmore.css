@@ -1,0 +1,20 @@
+
+
+.readmore {
+    position: relative;
+    background: linear-gradient(120.86deg, #4c1d95 3.99%, #e11d48 66.93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;  
+}
+
+.readmore:hover::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(120.86deg, #4c1d95 3.99%, #e11d48 66.93%);
+}

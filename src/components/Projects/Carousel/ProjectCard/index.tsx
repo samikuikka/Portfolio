@@ -3,6 +3,7 @@ import soloSVG from '../../../../images/solo.svg';
 import teamSVG from '../../../../images/team.svg';
 import PrimaryButton from '../../../buttons/PrimaryButton';
 import githubSVG from '../../../../images/logos/github.svg';
+import { ReadMore } from './ReadMore';
 
 /**
  * Card showing project information
@@ -19,6 +20,7 @@ interface ProjectProps {
     github: string;
     links: { url: string; label: string; }[];
     image?: string;
+    to: string;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
@@ -29,7 +31,8 @@ const ProjectCard: React.FC<ProjectProps> = ({
     technologies,
     github,
     links,
-    image
+    image,
+    to,
 }) => {
 
 
@@ -87,13 +90,17 @@ const ProjectCard: React.FC<ProjectProps> = ({
                                 </div>
                             </div>
                             {/** GitHub */}
-                            <div className='h-full flex flex-col justify-end'>
+                            <div className='h-full flex flex-col justify-end pb-4 pr-2'>
                                 <PrimaryButton
                                     name="GitHub"
                                     onClick={() => window.open(github, '_blank', 'noreferrer')}
+                                    size="small"
                                 >
-                                    <div className="h-6 w-6 mr-2"><img src={githubSVG} /></div>
+                                    <div className="h-4 w-4 mr-2"><img src={githubSVG} /></div>
                                 </PrimaryButton>
+                                <ReadMore 
+                                    to={to}
+                                />
 
                             </div>
                         </div>

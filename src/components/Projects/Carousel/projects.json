@@ -13,7 +13,8 @@
             }
         ],
         "image": "portfolio.png",
-        "github": "https://github.com/samikuikka/Portfolio"
+        "github": "https://github.com/samikuikka/Portfolio",
+        "to": "/projects/portfolio"
     },
     {
         "name": "Workout logger",
@@ -32,7 +33,8 @@
             }
         ],
         "image": "workout-logger.png",
-        "github": "https://github.com/samikuikka/workout-logger-backend"
+        "github": "https://github.com/samikuikka/workout-logger-backend",
+        "to": "/projects/workout-logger"
     },
     {
         "name": "AI assisted content creator",
@@ -42,7 +44,8 @@
         "technologies": "TypeScript, React, Tailwind",
         "image": "ai-creator.png",
         "links": [],
-        "github": "https://github.com/bytecraftoy/aalto-2022"
+        "github": "https://github.com/bytecraftoy/aalto-2022",
+        "to": "/projects/ai-assisted-content-creator"
     },
     {
         "name": "E-commerce site mockup",
@@ -57,7 +60,8 @@
         ],
         "technologies": "Flutter, Dart, Riverpod",
         "image": "e-commerce.png",
-        "github": "https://github.com/samikuikka/device-project2"
+        "github": "https://github.com/samikuikka/device-project2",
+        "to": "/projects/e-commerce-mockup"
     },
     {
         "name": "Code grader website",
@@ -67,7 +71,8 @@
         "technologies": "Astro, React, Deno, PostgreSQL, Redis, Docker",
         "image": "code-grader.png",
         "links": [],
-        "github": "https://github.com/samikuikka/code-grader"
+        "github": "https://github.com/samikuikka/code-grader",
+        "to": "/projects/code-grader"
     },
     {
         "name": "Chat application",
@@ -77,6 +82,7 @@
         "technologies": "Astro, Tailwind, React, TypeScript, React, Deno, Kubernetes, PostgreSQL ",
         "image": "message-app.png",
         "links": [],
-        "github": "https://github.com/samikuikka/Chat-application"
+        "github": "https://github.com/samikuikka/Chat-application",
+        "to": "/projects/chat-application"
     }
 ]
