@@ -1,5 +1,5 @@
 ---
-const { type, title, github, website } = Astro.props;
+const { type, title, github, website, project } = Astro.props;
 import soloSVG from "../images/solo.svg";
 import teamSVG from "../images/team.svg";
 import { Icon } from "astro-icon";
@@ -16,7 +16,7 @@ import { Icon } from "astro-icon";
                     <img src={teamSVG} class="inline h-6 w-6" />
                 )
             }
-            {type}
+            {type} - {project}
         </div>
     </div>
     <div

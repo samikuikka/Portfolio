@@ -4,17 +4,18 @@ import Glass from "../components/Glass/AstroGlass.astro";
 import Header from "../components/Header/ProjectHeader.astro";
 import ProjectBaseInfo from '../components/ProjectBaseInfo.astro';
 import Technologies from '../components/ProjectTechnologies/Technologies.astro';
+import ScreenshotCarousel from '../components/ScreenshotCarousel';
 
 type Props = MarkdownLayoutProps<{
     // Define frontmatter props here
     title: string;
     type: string;
+    project: string;
     github: string;
     website: string;
     describtion: string;
     technologies: [string];
-    author: string;
-    date: string;
+    screenshots: [string];
 }>;
 
 const { frontmatter, url } = Astro.props;
@@ -37,22 +38,32 @@ const { frontmatter, url } = Astro.props;
                             <!-- Nav -->
                             <Header />
 
-                            <article class="prose-sm md:prose lg:prose-lg xl:prose-xl pt-3">
+                            <article class="prose-sm md:prose lg:prose-lg xl:prose-xl pt-3 prose-li:">
 
                                 <ProjectBaseInfo 
                                     title={frontmatter.title}
                                     type={frontmatter.type} 
                                     github={frontmatter.github}
                                     website={frontmatter.website}
+                                    project={frontmatter.project}
                                 />
                                 
                                 <h2>About</h2>
                                 <p>{frontmatter.describtion}</p>
 
+                                <h2>Screenshots</h2>
+                                <ScreenshotCarousel
+                                    screenshots={frontmatter.screenshots} 
+                                    client:only="react" 
+                                />
+
                                 <h2>Technologies</h2>
                                 <Technologies technologies={frontmatter.technologies} />
 
                                 <slot />
+
+                                
+
                             </article>
                         </div>
                     </Glass>

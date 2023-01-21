@@ -1,0 +1,42 @@
+---
+layout: ../../layouts/BaseLayout.astro
+title: "Portfolio"
+type: "solo"
+project: "frontend"
+github: "https://github.com/samikuikka/Portfolio"
+website: "https://www.samikuikka.website/"
+technologies:
+  [
+    { name: "react" },
+    { name: "astro" },
+    { name: "tailwindcss", logo: "tailwindcss-icon" },
+    { name: "typescript", logo: "typescript-icon" },
+    { name: "mdx" },
+    { name: "figma" },
+  ]
+describtion: "Portfolio is an frontend Astro js application using React components. TypeScript is used in the components and Tailwind CSS used for styling.
+    I have also been trying to learn more about web design and web design tools. The style of the website is designed using Figma. Some of the componenets use the material design (m3) specification on them.
+"
+screenshots: ["/portfolio.png", '/screenshots/portfolio-2.png', '/screenshots/portfolio-3.png', '/screenshots/portfolio-4.png']
+---
+
+import { Prism } from "@astrojs/prism";
+
+## About the Tech Stack
+
+At the end of 2022 I started experimenting with Astro.js and fall in love right from my first try.
+
+Choosing **Astro** as the framework for the portfolio had many great reasons:
+    1. Fast by default (fast!🚀) due to pure html / css
+    2. TailwindCSS integration (💖 TailwindCSS) 
+    3. Island architecture let me use React for interactive components
+
+## Running the application
+
+For running the application on your own machine.
+
+<Prism
+  lang="bash"
+  code={`npm i
+npm run dev`}
+/>

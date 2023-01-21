@@ -1,0 +1,57 @@
+---
+layout: ../../layouts/BaseLayout.astro
+title: "Workout logger"
+type: "team"
+project: "fullstack"
+github: "https://github.com/samikuikka/workout-logger-backend"
+website: "https://workout-logger.onrender.com/"
+technologies:
+  [
+    { name: "nodejs" },
+    { name: "react" },
+    { name: "mongodb" },
+    { name: "express"},
+    { name: "material-ui" },
+    { name: "jest" }
+  ]
+describtion: " Fullstack application to keep track of gym exercises.
+Application let's user to create gym workouts and keep track of previous workouts in the application.
+Created for the project course 'Design of WWW Services' in the team of three.
+"
+screenshots: ['/screenshots/workout-logger-1.png', '/screenshots/workout-logger-2.png','/screenshots/workout-logger-3.png','/screenshots/workout-logger-4.png','/screenshots/workout-logger-5.png']
+---
+
+import { Prism } from "@astrojs/prism";
+
+## My contribution
+
+I have designed and developed a RESTful API using Node.js and MongoDB (and mongoose) as the database for a gym workout tracking application.
+This application was designed to help users keep track of their gym workouts, including exercises, sets, and reps, and allows them to view their progress over time.
+
+I also implemented advanced features such as authentication and authorization, allowing users to securely access and update their workout data.
+
+In the frontend side of the project, I was helping to develop components for the application, e.g., login screen.
+
+Overall, this project was a great opportunity for me to showcase my skills in developing RESTful API endpoint and my proficiency with Node.js and MongoDB.
+
+## Pages
+
+### Login
+The first screen the user is taken to is a simple login page which has the option to go to register for the service through a simple form. After the user has logged in they are taken to the main page.
+### Register
+The register page lets the user register for the application. By submitting the form with valid user credentials, the user is forwarded to the home page of the application.
+### Main page
+Once logged in the user is shown his name on the header and an option to log out. Navigation through the service is done in the sidebar. On the main page, the user has the option to start a new workout by pressing a button and is also shown some of their workout histories.
+### Add a workout
+The user has a couple of ways to add a new workout. They can choose a template they’ve done earlier or they can build a completely new workout adding exercises one by one and then save that as a template to use later. User submits workouts by filling out forms containing exercises, these exercise groups are then the workouts that are submitted.
+### History
+Here the user can view all the workouts they’ve done. Users can see all the details of the workout such as exercises, sets, repetitions and weights. 
+### Settings
+The user can change the language of the user's choice in the setting menu.
+
+
+## Rest of the links
+
+[Frontend github](https://github.com/pyrde50/workout-logger)
+
+API endpoint: https://workout-logger-backend.onrender.com
