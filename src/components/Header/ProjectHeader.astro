@@ -2,8 +2,16 @@
 import ProjectHeaderLink from "./ProjectHeaderLink.astro";
 ---
 
-<div class="flex flex-row w-full px-7 gap-5">
-
-    <ProjectHeaderLink name="Home" href="/" />
-   <!--  <ProjectHeaderLink name="Projects" href="/projects/test" /> -->
+<div
+  class="sticky top-0 box-border w-full h-12 rounded-b-md bg-gradient-to-t from-white-100/20 to-white-100/40 hover:from-white-100/40 hover:to-white-100/60 backdrop-blur-md shadow-glass z-[99999] hover:transition-all"
+>
+  <div
+    class="flex flex-row items-center justify-between w-full h-full px-7 md:px-16 gap-5"
+  >
+    <h2 class="text-xl font-bold">Portfolio</h2>
+    <div class="flex flex-row item-center">
+        <ProjectHeaderLink name="Home" href="/" />
+        <!-- <ProjectHeaderLink name="Projects" href="/projects/test" /> -->
+    </div>
+  </div>
 </div>
