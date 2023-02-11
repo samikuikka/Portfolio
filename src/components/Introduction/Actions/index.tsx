@@ -3,7 +3,7 @@ import PrimaryButton from '../../buttons/PrimaryButton';
 const Actions = () => {
 
     const showResume= () => {
-        fetch('Resume.pdf').then(response => {
+        fetch('Resume-2.pdf').then(response => {
             response.blob().then(blob => {
 
                 const fileURL = window.URL.createObjectURL(blob);
