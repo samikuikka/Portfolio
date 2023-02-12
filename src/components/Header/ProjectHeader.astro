@@ -1,9 +1,56 @@
 ---
 import ProjectHeaderLink from "./ProjectHeaderLink.astro";
+import logoUrl from "../../images/portfolio-logo.svg";
 ---
 
-<div class="flex flex-row w-full px-7 gap-5">
-
-    <ProjectHeaderLink name="Home" href="/" />
-   <!--  <ProjectHeaderLink name="Projects" href="/projects/test" /> -->
+<div
+  class="sticky top-0 box-border w-full h-12 rounded-b-md bg-gradient-to-t from-white-100/20 to-white-100/40 hover:from-white-100/20 hover:to-white-100/50 backdrop-blur-md shadow-glass z-[99999] hover:transition-all"
+>
+  <div
+    class="flex flex-row items-center justify-between w-full h-full px-7 md:px-16 gap-5"
+  >
+    <h2 class="hidden mobile:flex flex-row flex-1 items-center gap-2.5 text-xl font-bold ">
+      <img src={logoUrl} class="h-6 w-6" />
+      Portfolio
+    </h2>
+    <div class="flex flex-row flex-1 justify-start mobile:justify-center item-center">
+      <ProjectHeaderLink name="Home" href="/" />
+      <!-- <ProjectHeaderLink name="Projects" href="/projects/test" /> -->
+    </div>
+    <div class="flex flex-1 justify-end h-7">
+      <a href="/#contact" class="contact-button block z-50 h-full px-4">
+        <div class="contact-text">Contact</div>
+      </a>
+    </div>
+  </div>
 </div>
+
+<style>
+  .contact-button {
+    position: relative;
+  }
+  .contact-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 1px;
+    background: linear-gradient(
+      -45deg,
+      rgba(236, 72, 153, 1),
+      rgba(192, 132, 252, 1),
+      rgb(28, 86, 187)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+   .contact-button:hover .contact-text {
+    position: relative;
+    background: linear-gradient(45deg, #4c1d95 3.99%, #e11d48 66.93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
