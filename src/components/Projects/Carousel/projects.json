@@ -7,10 +7,6 @@
         "description": "This website is an frontend Astro js application using React components. TypeScript used in the components and Tailwind CSS  for styling. Website designed using Figma",
         "technologies": "Astro, Tailwind, React, TypeScript",
         "links": [
-            {
-                "url": "https://www.figma.com/file/BgN5KwqIHYnI9upxdVPz3M/Portfolio?node-id=52797%3A25955&t=4kHrbned5hTjqBfm-1",
-                "label": "Figma design"
-            }
         ],
         "image": "portfolio.png",
         "github": "https://github.com/samikuikka/Portfolio",
