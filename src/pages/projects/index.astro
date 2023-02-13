@@ -1,0 +1,39 @@
+---
+import '../../styles/global.css';
+import BaseHead from "../../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../config.js";
+import Header from "../../components/Header/ProjectHeader.astro";
+import Welcome from "../../components/ProjectsPage/Welcome.astro";
+import Showcase from "../../components/ProjectsPage/Showcase.astro";
+import AllProjects from '../../components/ProjectsPage/AllProjects.astro';
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="w-full min-h-full flex flex-col bg-gradient-to-tl from-violet-400/80 via-rose-500/60 to-fuchsia-400"
+    >
+      <Header />
+
+      <!-- Content -->
+      <div class="flex-1">
+        <Welcome />
+        <Showcase />
+        <AllProjects />
+      </div>
+    </div>
+  </body><style>
+    .root {
+      background-color: aqua;
+    }
+  </style>
+</html>
