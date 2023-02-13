@@ -1,19 +1,26 @@
-
-html, body {
-	width: 100%;
-	height: 100%;
-	/*overflow: hidden;*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /*overflow: hidden;*/
 }
 
 #root {
-	height: 100%;
-	overflow-y: scroll;
-	scroll-snap-type: y proximity;
-	scroll-behavior: smooth;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 }
 
 @media only screen and (min-width: 768px) {
-	#root div {
-		scroll-snap-align: start;
-	}
+  #root div {
+    scroll-snap-align: start;
+  }
+}
+
+.detailedText {
+  position: relative;
+  background: linear-gradient(45deg, #4c1d95 3.99%, #e11d48 66.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

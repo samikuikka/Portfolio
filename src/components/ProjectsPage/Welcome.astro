@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="w-full flex flex-col gap-20 md:gap-0 md:flex-row py-20">
+  <div class="flex-1 flex justify-center items-center">
+    <div class="font-sans font-bold text-lg w-4/5">
+      Welcome to my <span class="detailedText font-bold text-xl">Projects</span> page! I'm thrilled to share with you a selection of
+      my personal projects and achievements. Please take a moment to explore and
+      let me know your thoughts and feedback. Thank you for visiting!
+    </div>
+  </div>
+  <div class="flex-1 flex flex-col justify-center">
+    <div class="pl-10 w-4/5">
+        <Icon name="code-typing" />
+    </div>
+  </div>
+</div>
+
+<style>
+    .detailedText {
+        position: relative;
+        background: linear-gradient(45deg, #4c1d95 3.99%, #e11d48 66.93%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
