@@ -21,6 +21,7 @@ interface ProjectProps {
     links: { url: string; label: string; }[];
     image?: string;
     to: string;
+    className?: string;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
@@ -33,11 +34,12 @@ const ProjectCard: React.FC<ProjectProps> = ({
     links,
     image,
     to,
+    className
 }) => {
 
 
     return (
-        <div className='h-full w-full flex justify-center'>
+        <div className={`h-full w-full flex justify-center ${className}`}>
             <div className={`w-72 md:w-96 h-full px-[5%] py-[2%]`}>
                 <Glass>
                     <div

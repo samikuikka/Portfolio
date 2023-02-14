@@ -8,7 +8,7 @@
         "technologies": "Astro, Tailwind, React, TypeScript",
         "links": [
         ],
-        "image": "portfolio.png",
+        "image": "/portfolio.png",
         "github": "https://github.com/samikuikka/Portfolio",
         "to": "/projects/portfolio"
     },
@@ -28,7 +28,7 @@
                 "label": "Frontend github"
             }
         ],
-        "image": "workout-logger.png",
+        "image": "/workout-logger.png",
         "github": "https://github.com/samikuikka/workout-logger-backend",
         "to": "/projects/workout-logger"
     },
@@ -38,7 +38,7 @@
         "type": "Fullstack",
         "description": "Project course fullstack application done for the company Bytecraft. Tool to help the use of AI models (GPT-3) in written game asset creation. Team project where I have focused on the frontend side of the project. React + TypeScript with Material Design. (Website currently not available for public)",
         "technologies": "TypeScript, React, Tailwind",
-        "image": "ai-creator.png",
+        "image": "/ai-creator.png",
         "links": [],
         "github": "https://github.com/bytecraftoy/aalto-2022",
         "to": "/projects/ai-assisted-content-creator"
@@ -55,7 +55,7 @@
             }
         ],
         "technologies": "Flutter, Dart, Riverpod",
-        "image": "e-commerce.png",
+        "image": "/e-commerce.png",
         "github": "https://github.com/samikuikka/device-project2",
         "to": "/projects/e-commerce-mockup"
     },
@@ -65,7 +65,7 @@
         "type": "Fullstack",
         "description": "Website where user can send solution to coding problem which gets graded in the backend. Backend project with focus on high volume of requests, communication done with WebSockets. Redis used as a cache. PostgreSQL used to store code submissions. Contains docker-compose file.",
         "technologies": "Astro, React, Deno, PostgreSQL, Redis, Docker",
-        "image": "code-grader.png",
+        "image": "/code-grader.png",
         "links": [],
         "github": "https://github.com/samikuikka/code-grader",
         "to": "/projects/code-grader"
@@ -76,7 +76,7 @@
         "type": "Fullstack",
         "description": "Chat application using WebSockets. Deno backend which scaled using Kubernetes based on the load on the server. App let's user to send messages and comment to messages which are shown to all of the users using the service in real-time.",
         "technologies": "Astro, Tailwind, React, TypeScript, React, Deno, Kubernetes, PostgreSQL ",
-        "image": "message-app.png",
+        "image": "/message-app.png",
         "links": [],
         "github": "https://github.com/samikuikka/Chat-application",
         "to": "/projects/chat-application"

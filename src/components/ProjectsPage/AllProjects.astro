@@ -1,12 +1,10 @@
 ---
-
-const projects = await Astro.glob('../../pages/projects/*.mdx');
+import ProjectCards from "./ProjectCards";
 ---
 
-
-<div class="w-full flex flex-col">
-
-    <div></div>
-    
-    
+<div class="w-full flex flex-col items-center gap-10">
+    <div class="flex w-5/6 h-10 items-center text-3xl font-bold">
+         All Projects
+    </div>
+  <ProjectCards client:load />
 </div>
